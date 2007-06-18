@@ -1,0 +1,11 @@
+--- acpitail-0.1/Makefile~	2007-06-18 12:07:30.000000000 +0200
++++ acpitail-0.1/Makefile	2007-06-18 22:44:26.000000000 +0200
+@@ -12,7 +12,7 @@
+ 	$(CC) -Wall -W $(OBJS) $(LDFLAGS) -o acpitail
+ 
+ install: acpitail
+-	cp acpitail /usr/local/sbin
++	cp acpitail $(DESTDIR)/usr/sbin
+ 
+ clean:
+ 	rm -f $(OBJS) acpitail core *.da *.gcov *.bb*
