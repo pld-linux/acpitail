@@ -1,5 +1,6 @@
-Summary:	shows information of an ACPI capable system
-Summary(pl.UTF-8):	wyświetla informacje systemu ACPI
+# TODO: optflags; why -static?
+Summary:	Shows information of an ACPI capable system
+Summary(pl.UTF-8):	Wyświetlanie informacji systemu ACPI
 Name:		acpitail
 Version:	0.1
 Release:	0.1
@@ -20,8 +21,8 @@ temperatures, and other relevant details of an ACPI capable system
 
 %description -l pl.UTF-8
 acpitail wyświetla informacje o stanie baterii, stanie wiatraków,
-temperaturach oraz innych podobnych rzeczach sysetmu ACPI (głównie
-laptopy).
+temperaturach oraz innych podobnych szczegółach systemu ACPI (głównie
+w laptopach).
 
 %prep
 %setup -q
