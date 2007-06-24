@@ -10,6 +10,7 @@ Source0:	http://www.vanheusden.com/acpitail/%{name}-%{version}.tgz
 Patch0:		%{name}-Makefile.patch
 URL:		http://www.vanheusden.com/acpitail/
 BuildRequires:	libacpi-devel
+ExclusiveArch:	%{ix86} %{x8664} ia64
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
