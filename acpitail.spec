@@ -1,4 +1,3 @@
-# TODO: optflags; why -static?
 Summary:	Shows information of an ACPI capable system
 Summary(pl.UTF-8):	Wyświetlanie informacji systemu ACPI
 Name:		acpitail
@@ -11,7 +10,6 @@ Source0:	http://www.vanheusden.com/acpitail/%{name}-%{version}.tgz
 Patch0:		%{name}-Makefile.patch
 URL:		http://www.vanheusden.com/acpitail/
 BuildRequires:	libacpi-devel
-BuildRequires:	libacpi-static
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -30,7 +28,9 @@ w laptopach).
 
 %build
 %{__make} \
-	CC="%{__cc}"
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags} -Wall -DVERSION=\\\"\$(VERSION)\\\"" \
+	LDFLAGS="%{rpmldflags} -lacpi"
 
 %install
 rm -rf $RPM_BUILD_ROOT
